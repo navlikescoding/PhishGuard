@@ -1,10 +1,10 @@
-# 🛡️ PhishGuard — Phishing Link Detection System
+# PhishGuard — Phishing Link Detection System
 
 > A machine learning-based phishing URL detection system built in R, trained on 822,010 URLs and deployed as a real-time web application.
 
 ---
 
-## 📌 Overview
+## Overview
 
 PhishGuard is an end-to-end phishing URL detection system that uses machine learning to classify any URL as **Phishing** or **Legitimate** in real time. Rather than analysing webpage content, the system extracts 33 structural and statistical features directly from the URL string itself, making it fast, lightweight, and content-independent.
 
@@ -12,19 +12,19 @@ The system was built entirely in R, trained on a large-scale labelled dataset of
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🔍 Real-time URL classification — results in under 1 second
-- 📊 Confidence score with visual confidence bar
-- 🧠 4 ML models trained and benchmarked
-- 📈 Model comparison with Accuracy, Precision, Recall, F1, and AUC-ROC
-- 📉 Confusion matrices, ROC curves, and feature importance charts
-- 🌐 Interactive web app (PhishGuard) built with Shiny
-- 💾 All models saved for reuse without retraining
+-  Real-time URL classification — results in under 1 second
+-  Confidence score with visual confidence bar
+-  4 ML models trained and benchmarked
+-  Model comparison with Accuracy, Precision, Recall, F1, and AUC-ROC
+-  Confusion matrices, ROC curves, and feature importance charts
+-  Interactive web app (PhishGuard) built with Shiny
+-  All models saved for reuse without retraining
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 PhishGuard/
@@ -43,7 +43,7 @@ PhishGuard/
 
 ---
 
-## 📦 Requirements
+##  Requirements
 
 ### R Packages
 ```r
@@ -61,7 +61,7 @@ install.packages(c(
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 | Property | Value |
 |---|---|
@@ -74,7 +74,7 @@ install.packages(c(
 
 ---
 
-## 🔧 Feature Engineering
+## Feature Engineering
 
 33 features are extracted from each raw URL string, grouped into 6 categories:
 
@@ -89,7 +89,7 @@ install.packages(c(
 
 ---
 
-## 🤖 Models & Results
+## Models & Results
 
 Four machine learning models were trained and evaluated:
 
@@ -100,11 +100,11 @@ Four machine learning models were trained and evaluated:
 | XGBoost | 90.98% | 0.8840 | 0.9511 | 0.9163 | **0.971** |
 | LiblineaR | 83.05% | 0.8068 | 0.8859 | 0.8445 | 0.905 |
 
-**✅ Best Model: XGBoost** — selected based on highest AUC-ROC of **0.971**
+**Best Model: XGBoost** — selected based on highest AUC-ROC of **0.971**
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 ### 1. Train the Models
 ```r
@@ -114,7 +114,7 @@ setwd("D:/PhishGuard")
 # Run the training script
 source("phishing_detection_v2.R")
 ```
-> ⚠️ Training takes approximately 1–2 hours on a standard laptop with 16GB RAM.
+>  Training takes approximately 1–2 hours on a standard laptop with 16GB RAM.
 
 ### 2. Predict a Single URL (CLI)
 ```r
@@ -123,7 +123,7 @@ source("predict_url_v2.R")
 
 # Enter URL when prompted:
 # Enter URL: https://paypal-secure-login.tk
-# Result: 🚨 PHISHING (Confidence: 94.3%)
+# Result: PHISHING (Confidence: 94.3%)
 ```
 
 ### 3. Launch the Web App
@@ -147,7 +147,7 @@ results         <- readRDS("results.rds")
 
 ---
 
-## 🌐 PhishGuard Web App
+## PhishGuard Web App
 
 The PhishGuard Shiny application provides a clean, real-time interface for URL classification:
 
@@ -158,7 +158,7 @@ The PhishGuard Shiny application provides a clean, real-time interface for URL c
 
 ---
 
-## 🔬 Why These Models?
+## Why These Models?
 
 | Model | Reason |
 |---|---|
@@ -169,7 +169,7 @@ The PhishGuard Shiny application provides a clean, real-time interface for URL c
 
 ---
 
-## 🔮 Future Work
+## Future Work
 
 - Integrate WHOIS and domain age lookup as additional features
 - Connect to Google Safe Browsing API or VirusTotal for real-time cross-validation
@@ -180,12 +180,11 @@ The PhishGuard Shiny application provides a clean, real-time interface for URL c
 
 ---
 
-## 👥 Authors
+## Author
 
 | Name | Program | Institution |
 |---|---|---|
 | Navaneeth | M.Tech (Integrated) – CSE with Business Analytics | VIT Chennai |
-| Prajeet P C | M.Tech (Integrated) – CSE with Business Analytics | VIT Chennai |
 
 ---
 
@@ -195,7 +194,7 @@ This project was developed for academic purposes at Vellore Institute of Technol
 
 ---
 
-## 📚 References
+## References
 
 1. I. Fette, N. Sadeh, and A. Tomasic, "Learning to detect phishing emails," WWW 2007.
 2. M. Prabhakar et al., "Detection of phishing websites using a machine learning algorithm," IJESR, 2020.
